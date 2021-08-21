@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block scripts %}
+
+    //Usually, you put script-tags into the head
+    function getChuckJoke() {
+        //This performs a POST-Request.
+        //Use "$.get();" in order to perform a GET-Request (you have to take a look in the rest-API-documentation, if you're unsure what you need)
+        //The Browser downloads the webpage from the given url, and returns the data.
+        $.get("http://127.0.0.1:5000/get-chuck-joke", function (data) { $('#joke').console.log(data); });
+    }
+
+    function getChuckJokeOld() {
+        //This performs a POST-Request.
+        //Use "$.get();" in order to perform a GET-Request (you have to take a look in the rest-API-documentation, if you're unsure what you need)
+        //The Browser downloads the webpage from the given url, and returns the data.
+        $.get("http://127.0.0.1:5000/get-chuck-joke", function (data) { $('#joke').html(data); });
+    }
+
+    function getChuckJokeOld2() {
+        //This performs a POST-Request.
+        //Use "$.get();" in order to perform a GET-Request (you have to take a look in the rest-API-documentation, if you're unsure what you need)
+        //The Browser downloads the webpage from the given url, and returns the data.
+        $.ajax({
+            url: "https://127.0.0.1:5000/get-chuck-joke",
+            dataType: "jsonp",
+            success: function(data) { $('#joke').html(data); }
+        });
+    }
+
+{% endblock %}
+
+{% block content %}
+    <h1>{% block title %} Welcome to Jokes Application {% endblock %}</h1>
+
+    <p>Click the button to retrieve a joke.</p>
+
+    <button onclick="getChuckJoke()">Get a Chuck joke</button>
+
+    <button onclick="getNeutralJoke()">Get a neutral joke</button>
+
+    <p id="joke"></p>
+
+
+{% endblock %}

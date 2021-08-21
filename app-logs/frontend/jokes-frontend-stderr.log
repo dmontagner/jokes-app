@@ -1,0 +1,155 @@
+  File "/app/run-flask.sh", line 3
+    export FLASK_APP=frontend
+           ^
+SyntaxError: invalid syntax
+  File "/app/run-flask.sh", line 3
+    export FLASK_APP=frontend
+           ^
+SyntaxError: invalid syntax
+  File "/app/run-flask.sh", line 3
+    export FLASK_APP=frontend
+           ^
+SyntaxError: invalid syntax
+  File "/app/run-flask.sh", line 3
+    export FLASK_APP=frontend
+           ^
+SyntaxError: invalid syntax
+  File "/app/run-flask.sh", line 3
+    export FLASK_APP=frontend
+           ^
+SyntaxError: invalid syntax
+  File "/app/run-flask.sh", line 3
+    export FLASK_APP=frontend
+           ^
+SyntaxError: invalid syntax
+  File "/app/run-flask.sh", line 3
+    export FLASK_APP=frontend
+           ^
+SyntaxError: invalid syntax
+  File "/app/run-flask.sh", line 3
+    export FLASK_APP=frontend
+           ^
+SyntaxError: invalid syntax
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://172.17.0.2:8080/ (Press CTRL+C to quit)
+[2021-08-21 14:00:51,452] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/app/frontend.py", line 9, in index
+    return render_template("index.html")
+  File "/usr/local/lib/python3.8/dist-packages/flask/templating.py", line 148, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/local/lib/python3.8/dist-packages/jinja2/environment.py", line 1068, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/local/lib/python3.8/dist-packages/jinja2/environment.py", line 997, in get_template
+    return self._load_template(name, globals)
+  File "/usr/local/lib/python3.8/dist-packages/jinja2/environment.py", line 958, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/usr/local/lib/python3.8/dist-packages/jinja2/loaders.py", line 125, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/usr/local/lib/python3.8/dist-packages/flask/templating.py", line 59, in get_source
+    return self._get_source_fast(environment, template)
+  File "/usr/local/lib/python3.8/dist-packages/flask/templating.py", line 95, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+172.17.0.1 - - [21/Aug/2021 14:00:51] "[35m[1mGET / HTTP/1.1[0m" 500 -
+172.17.0.1 - - [21/Aug/2021 14:00:51] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://172.17.0.3:8080/ (Press CTRL+C to quit)
+172.17.0.1 - - [21/Aug/2021 14:05:02] "GET / HTTP/1.1" 200 -
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://172.17.0.3:8080/ (Press CTRL+C to quit)
+172.17.0.1 - - [21/Aug/2021 14:07:46] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [21/Aug/2021 14:07:47] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [21/Aug/2021 14:07:47] "GET / HTTP/1.1" 200 -
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://172.17.0.3:8080/ (Press CTRL+C to quit)
+172.17.0.1 - - [21/Aug/2021 14:09:54] "GET / HTTP/1.1" 200 -
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://172.17.0.2:8080/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 131-449-178
+172.17.0.1 - - [21/Aug/2021 14:12:14] "GET / HTTP/1.1" 200 -
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://172.17.0.3:8080/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 114-276-283
+172.17.0.1 - - [21/Aug/2021 14:16:40] "GET / HTTP/1.1" 200 -
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://172.17.0.3:8080/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 521-757-727
+172.17.0.1 - - [21/Aug/2021 14:18:02] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [21/Aug/2021 14:18:04] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [21/Aug/2021 14:18:16] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [21/Aug/2021 14:18:33] "GET / HTTP/1.1" 200 -
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://172.17.0.2:8080/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 122-698-195
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://172.17.0.3:8080/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 124-778-435
+172.17.0.1 - - [21/Aug/2021 14:26:04] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [21/Aug/2021 14:26:25] "GET / HTTP/1.1" 200 -
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://172.17.0.3:8080/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 144-763-919
+172.17.0.1 - - [21/Aug/2021 14:33:56] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [21/Aug/2021 14:34:07] "GET / HTTP/1.1" 200 -
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://172.17.0.3:8080/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 938-297-966
+172.17.0.1 - - [21/Aug/2021 14:41:49] "GET / HTTP/1.1" 200 -
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://172.17.0.3:8080/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 100-037-008
+172.17.0.1 - - [21/Aug/2021 14:46:38] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [21/Aug/2021 14:48:25] "GET / HTTP/1.1" 200 -
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://172.17.0.3:8080/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 515-947-597
+172.17.0.1 - - [21/Aug/2021 14:50:40] "GET / HTTP/1.1" 200 -
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://172.17.0.3:8080/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 258-845-304
+172.17.0.1 - - [21/Aug/2021 15:01:34] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [21/Aug/2021 15:02:36] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [21/Aug/2021 15:02:38] "GET / HTTP/1.1" 200 -
