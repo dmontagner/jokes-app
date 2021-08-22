@@ -1,16 +1,21 @@
-ct-jokes-backend:
-  build: $BACKEND_BUILD_DIR
-  container_name: $BACKEND_CONTAINER_NAME
-  ports:
-    - "$BACKEND_PORT_NUMBER:$BACKEND_PORT_NUMBER/tcp"
-  volumes:
-    - ./app-logs/backend:/var/log/app
+version: '2'
 
-ct-jokes-frontend:
-  build: $FRONTEND_BUILD_DIR
-  container_name: $FRONTEND_CONTAINER_NAME
-  ports:
-    - "$FRONTEND_PORT_NUMBER:$FRONTEND_PORT_NUMBER/tcp"
-  volumes:
-    - ./app-logs/frontend:/var/log/app
+services:
+  ct-jokes-backend:
+    build: $BACKEND_BUILD_DIR
+    image: $BACKEND_IMAGE_NAME:$BACKEND_IMAGE_TAG
+    container_name: $BACKEND_CONTAINER_NAME
+    ports:
+      - "$BACKEND_PORT_NUMBER:$BACKEND_PORT_NUMBER/tcp"
+    volumes:
+      - ./app-logs/backend:/var/log/app
+
+  ct-jokes-frontend:
+    build: $FRONTEND_BUILD_DIR
+    image: $FRONTEND_IMAGE_NAME:$FRONTEND_IMAGE_TAG
+    container_name: $FRONTEND_CONTAINER_NAME
+    ports:
+      - "$FRONTEND_PORT_NUMBER:$FRONTEND_PORT_NUMBER/tcp"
+    volumes:
+      - ./app-logs/frontend:/var/log/app
 

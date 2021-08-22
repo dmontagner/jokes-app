@@ -1,4 +1,4 @@
-FROM jokes_base:latest
+FROM jokes_base:no-chuck
 
 LABEL org.opencontainers.image.authors="diogomontagner.net"
 ARG DEBIAN_FRONTEND=noninteractive
