@@ -1,4 +1,4 @@
-IMAGE_TAG = latest
+IMAGE_TAG = no-chuck
 
 PWD = $(shell pwd)
 VAR_FILE ?= jokes-app.params

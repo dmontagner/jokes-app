@@ -10,7 +10,7 @@ export BACKEND_IMAGE_NAME=jokes_backend
 export BACKEND_IMAGE_TAG=latest
 export BACKEND_CONTAINER_NAME=jokes_backend_1
 export BACKEND_BUILD_DIR=ct-jokes-backend
-export BACKEND_PORT_NUMBER=5000
+export BACKEND_PORT_NUMBER=6000
 export BACKEND_PORT_PROTOCOL=tcp
 
 # Frontend container and image
@@ -18,7 +18,7 @@ export FRONTEND_IMAGE_NAME=jokes_frontend
 export FRONTEND_IMAGE_TAG=latest
 export FRONTEND_CONTAINER_NAME=jokes_frontend_1
 export FRONTEND_BUILD_DIR=ct-jokes-frontend
-export FRONTEND_PORT_NUMBER=8080
+export FRONTEND_PORT_NUMBER=9090
 export FRONTEND_PORT_PROTOCOL=tcp
 
 # Docker Compose File
