@@ -9,7 +9,7 @@ TAG ?= all
 include $(VAR_FILE)
 
 # Define run options for Docker-compose
-RUN_OPTIONS = IMAGE_TAG=$(IMAGE_TAG)
+RUN_OPTIONS = IMAGE_TAG=$(IMAGE_TAG) COMPOSE_PROJECT_NAME=$(APP_NAME)
 
 build: build-base build-main
 
