@@ -25,4 +25,4 @@ export FRONTEND_PORT_PROTOCOL=tcp
 export DOCKER_COMPOSE_FILE=docker-compose.yaml
 
 # App Name
-export APP_NAME=jokes-app
+export APP_NAME=jokes-app-no-chuck
