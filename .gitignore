@@ -1,5 +1,3 @@
-app-logs/backend/jokes-backend-stderr.log
-app-logs/backend/jokes-backend-stdout.log
-app-logs/frontend/jokes-frontend-stderr.log
-app-logs/frontend/jokes-frontend-stdout.log
+app-logs/*
+app-logs/*/*
 

@@ -153,3 +153,44 @@ jinja2.exceptions.TemplateNotFound: index.html
 172.17.0.1 - - [21/Aug/2021 15:01:34] "GET / HTTP/1.1" 200 -
 172.17.0.1 - - [21/Aug/2021 15:02:36] "GET / HTTP/1.1" 200 -
 172.17.0.1 - - [21/Aug/2021 15:02:38] "GET / HTTP/1.1" 200 -
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://172.17.0.2:8080/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 446-925-311
+172.17.0.1 - - [22/Aug/2021 00:35:39] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [22/Aug/2021 00:35:39] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://172.17.0.3:8080/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 119-215-967
+172.17.0.1 - - [22/Aug/2021 00:38:49] "GET / HTTP/1.1" 200 -
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://172.17.0.3:8080/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 103-210-044
+172.17.0.1 - - [22/Aug/2021 00:40:16] "GET / HTTP/1.1" 200 -
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://172.17.0.3:8080/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 491-393-271
+172.17.0.1 - - [22/Aug/2021 00:42:14] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [22/Aug/2021 00:43:59] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [22/Aug/2021 00:46:13] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [22/Aug/2021 00:51:08] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [22/Aug/2021 00:51:08] "GET /static/style.css HTTP/1.1" 200 -
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://172.17.0.3:8080/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 491-393-271
+172.17.0.1 - - [22/Aug/2021 00:53:16] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [22/Aug/2021 00:53:16] "GET /static/style.css HTTP/1.1" 200 -

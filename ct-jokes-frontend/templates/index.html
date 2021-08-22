@@ -2,30 +2,18 @@
 
 {% block scripts %}
 
-    //Usually, you put script-tags into the head
     function getChuckJoke() {
         //This performs a POST-Request.
         //Use "$.get();" in order to perform a GET-Request (you have to take a look in the rest-API-documentation, if you're unsure what you need)
         //The Browser downloads the webpage from the given url, and returns the data.
-        $.get("http://127.0.0.1:5000/get-chuck-joke", function (data) { $('#joke').console.log(data); });
+        $.get("http://127.0.0.1:5000/get-chuck-joke", function (data) { $('#joke').html(data['joke']); });
     }
 
-    function getChuckJokeOld() {
+    function getNeutralJoke() {
         //This performs a POST-Request.
         //Use "$.get();" in order to perform a GET-Request (you have to take a look in the rest-API-documentation, if you're unsure what you need)
         //The Browser downloads the webpage from the given url, and returns the data.
-        $.get("http://127.0.0.1:5000/get-chuck-joke", function (data) { $('#joke').html(data); });
-    }
-
-    function getChuckJokeOld2() {
-        //This performs a POST-Request.
-        //Use "$.get();" in order to perform a GET-Request (you have to take a look in the rest-API-documentation, if you're unsure what you need)
-        //The Browser downloads the webpage from the given url, and returns the data.
-        $.ajax({
-            url: "https://127.0.0.1:5000/get-chuck-joke",
-            dataType: "jsonp",
-            success: function(data) { $('#joke').html(data); }
-        });
+        $.get("http://127.0.0.1:5000/get-neutral-joke", function (data) { $('#joke').html(data['joke']); });
     }
 
 {% endblock %}
@@ -39,7 +27,10 @@
 
     <button onclick="getNeutralJoke()">Get a neutral joke</button>
 
-    <p id="joke"></p>
+   <div>
+    <p></p>
+        <p id="joke" class="joke_style"></p>
+    </div>
 
 
 {% endblock %}

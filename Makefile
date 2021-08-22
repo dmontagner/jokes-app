@@ -13,8 +13,6 @@ RUN_OPTIONS = IMAGE_TAG=$(IMAGE_TAG)
 
 build: build-base build-main
 
-#build-main: build-backend build-frontend
-
 build-base:
 	@echo "======================================================================"
 	@echo "Build docker images:                                                  "
@@ -30,18 +28,6 @@ build-main:
 	@echo "======================================================================"
 	$(RUN_OPTIONS) docker-compose -f $(DOCKER_FILE) up --build
 
-#build-backend:
-#	@echo "======================================================================"
-#	@echo "Build docker image - $(BACKEND_IMAGE_NAME):$(IMAGE_TAG)"
-#	@echo "======================================================================"
-#	docker build -f $(BACKEND_BUILD_DIR)/Dockerfile -t $(BACKEND_CONTAINER_NAME):$(IMAGE_TAG) $(BACKEND_BUILD_DIR)
-
-#build-frontend:
-#	@echo "======================================================================"
-#	@echo "Build docker image - $(FRONTEND_IMAGE_NAME):$(IMAGE_TAG)"
-#	@echo "======================================================================"
-#	docker build -f $(FRONTEND_BUILD_DIR)/Dockerfile -t $(FRONTEND_CONTAINER_NAME):$(IMAGE_TAG) $(FRONTEND_BUILD_DIR)
-
 start:
 	@echo "Use docker compose file: $(DOCKER_FILE)"
 	$(RUN_OPTIONS) docker-compose -f $(DOCKER_FILE) up -d
@@ -55,23 +41,23 @@ restart: restart-main
 restart-main: restart-backend restart-frontend
 
 restart-backend:
-	$(RUN_OPTIONS) docker-compose -f $(DOCKER_FILE) restart ct-jokes-backend
+	$(RUN_OPTIONS) docker-compose -f $(DOCKER_FILE) restart $(BACKEND_BUILD_DIR)
 
 restart-frontend:
-	$(RUN_OPTIONS) docker-compose -f $(DOCKER_FILE) restart ct-jokes-frontend
+	$(RUN_OPTIONS) docker-compose -f $(DOCKER_FILE) restart $(FRONTEND_BUILD_DIR)
 
 clean:
-	@echo "======================================================================"
+	@echo "================================================================================"
 	@echo "Cleaning up containers for:"
-	@echo "		Backend container ...: $(BACKEND_CONTAINER_NAME)	             "
-	@echo "		Frontend container ..: $(FRONTEND_CONTAINER_NAME)                "
+	@echo "		Backend container ...: $(BACKEND_CONTAINER_NAME)	                       "
+	@echo "		Frontend container ..: $(FRONTEND_CONTAINER_NAME)                          "
 
 	$(RUN_OPTIONS) docker-compose -f $(DOCKER_FILE) rm --force
 
 	@echo ""
-	@echo "======================================================================"
+	@echo "================================================================================"
 	@echo "Cleaning images for:"
-	@echo "		Backend image ...: $(BACKEND_IMAGE_NAME):$(IMAGE_TAG)            "
-	@echo "		Frontend image ..: $(FRONTEND_IMAGE_NAME):$(IMAGE_TAG)           "
-	docker rmi $(APP_NAME)_$(BACKEND_IMAGE_NAME):$(IMAGE_TAG)
-	docker rmi $(APP_NAME)_$(FRONTEND_IMAGE_NAME):$(IMAGE_TAG)
+	@echo "		Backend image ...: $(APP_NAME)_$(BACKEND_BUILD_DIR):$(IMAGE_TAG)           "
+	@echo "		Frontend image ..: $(APP_NAME)_$(FRONTEND_BUILD_DIR):$(IMAGE_TAG)          "
+	docker rmi $(APP_NAME)_$(BACKEND_BUILD_DIR):$(IMAGE_TAG)
+	docker rmi $(APP_NAME)_$(FRONTEND_BUILD_DIR):$(IMAGE_TAG)

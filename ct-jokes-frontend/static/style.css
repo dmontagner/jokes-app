@@ -4,3 +4,11 @@ h1 {
     text-align: center;
     padding: 10px;
 }
+
+.joke_style {
+    border: 2px #eee solid;
+    color: red;
+    background: yellow;
+    text-align: center;
+    padding: 20px;
+}
