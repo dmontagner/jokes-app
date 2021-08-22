@@ -10,7 +10,7 @@ export BACKEND_IMAGE_NAME=jokes_backend
 export BACKEND_IMAGE_TAG=no-chuck
 export BACKEND_CONTAINER_NAME=jokes_backend_1
 export BACKEND_BUILD_DIR=ct-jokes-backend
-export BACKEND_PORT_NUMBER=6000
+export BACKEND_PORT_NUMBER=5555
 export BACKEND_PORT_PROTOCOL=tcp
 
 # Frontend container and image
