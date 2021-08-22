@@ -26,7 +26,7 @@ build-main:
 	@echo "		Backend image ...: $(BACKEND_IMAGE_NAME):$(IMAGE_TAG)            "
 	@echo "		Frontend image ..: $(FRONTEND_IMAGE_NAME):$(IMAGE_TAG)           "
 	@echo "======================================================================"
-	$(RUN_OPTIONS) docker-compose -f $(DOCKER_FILE) up --build
+	$(RUN_OPTIONS) docker-compose -f $(DOCKER_FILE) up --build -d
 
 start:
 	@echo "Use docker compose file: $(DOCKER_FILE)"
